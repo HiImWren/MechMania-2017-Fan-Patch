@@ -20,6 +20,7 @@ public class ObjectiveScript : MonoBehaviour
     private int blueOnMe = 0;
     private List<CharacterScript> charactersOnMe = new List<CharacterScript>();
     private ObjectEvent ObjectiveSecured = new ObjectEvent();
+    private AudioSource Capture;
 
     [SerializeField]
     private Image circleFill;
@@ -31,6 +32,7 @@ public class ObjectiveScript : MonoBehaviour
     {
         ObjectiveSecured.AddListener(nullping);
         Application.runInBackground = true;
+        Capture = this.GetComponent<AudioSource>();
     }
 
     void nullping(team t, ObjectiveScript o)
@@ -41,6 +43,8 @@ public class ObjectiveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Capture.isPlaying)
+            Capture.enabled = false;
         int length = charactersOnMe.Count;
         //Debug.Log(length);
         for (int i = 0; i < length; i++)
@@ -102,6 +106,7 @@ public class ObjectiveScript : MonoBehaviour
         //ERROR HERE CHECK ON THIS
         if (startTime && Time.time > timer + timeToCapture)
         {
+            Capture.enabled = true;
             //Debug.Log("Captured");
             if (redOnMe > 0 && blueOnMe == 0)
                 Captured(team.red);

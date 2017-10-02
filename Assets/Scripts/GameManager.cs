@@ -97,6 +97,10 @@ public class GameManager : MonoBehaviour {
     private int myNumber = 0;
     private static bool flagNotify;
     private bool winnerChosen = false;
+    [SerializeField]
+    public AudioSource klaxon;
+    private static GameManager Self;
+    
 
     private class HUDScript
     {
@@ -133,6 +137,8 @@ public class GameManager : MonoBehaviour {
                 BlueSlide.value = BlueTeamScore;
             }
         }
+
+
         public static void updatePoints()
         {
            // flagNotify = true;
@@ -144,7 +150,12 @@ public class GameManager : MonoBehaviour {
                 //Notify.text = "Blue Team has captured an objective!";
                 BlueScore.text = "" + BlueTeamScore;
                 BlueSlide.value = BlueTeamScore;
-            
+
+            if ((RedTeamScore > 450 && RedTeamScore<500) || (BlueTeamScore > 450 && BlueTeamScore < 500) || (gameTimer > 280 && gameTimer<300))
+                Self.klaxon.enabled = true;
+            else
+                Self.klaxon.enabled = false;
+
 
         }
         public static void NotifyObjective(team t)
@@ -371,6 +382,8 @@ public class GameManager : MonoBehaviour {
         objective0.addObjectiveListener(ObjectiveSecured);
         objective1.addObjectiveListener(ObjectiveSecured);
         objective2.addObjectiveListener(ObjectiveSecured);
+
+        Self = this;
     }
 
     void nullping(int i)

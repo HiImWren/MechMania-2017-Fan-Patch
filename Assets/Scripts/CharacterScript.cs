@@ -125,7 +125,7 @@ public class CharacterScript : MonoBehaviour
     private NavMeshAgent agent;         // The navmesh agent used for moving the characters
     [SerializeField]
     private GameObject prefabObject;    // The actual location of the prefab that is moving
-
+    private AudioSource Gunshot;
 
     // MONO FUNCTIONS ----------------------------------------------------------------------------- |
 
@@ -135,6 +135,7 @@ public class CharacterScript : MonoBehaviour
      */
     void Start()
     {
+        
         enter = transform.GetComponentInChildren<TriggerEnter>();
         // Event listeners
         IDied.AddListener(nullPing);
@@ -164,6 +165,7 @@ public class CharacterScript : MonoBehaviour
         // These functions are called every second. useful for timers and other time based events
         
         InvokeRepeating("enemyLocationTimerCountdown", 0.0f, 1.0f);
+        Gunshot = getPrefabObject().GetComponent<AudioSource>();
     }
     /*
      * Similar to Start but happens after all items are initialized in game space, is used for populating
@@ -189,6 +191,9 @@ public class CharacterScript : MonoBehaviour
      */
     void Update()
     {
+        if (!Gunshot.isPlaying)
+            Gunshot.enabled = false;
+
         checkZone();
         if (MyTeam == team.blue)
         {
@@ -487,7 +492,7 @@ public class CharacterScript : MonoBehaviour
      */
     public GameObject FindClosestItem()
     {
-        GameObject closestItem = new GameObject();
+        GameObject closestItem=null;
         NavMeshPath path = new NavMeshPath();
         float closestDistance = Mathf.Infinity;
         foreach (GameObject item in gm.IC.SpawnedItems)
@@ -609,6 +614,7 @@ public class CharacterScript : MonoBehaviour
     */
     private void Fire(firePriority priority)
     {
+        
         if (priority == firePriority.CLOSEST)
         {
             fireClosest();
@@ -625,7 +631,7 @@ public class CharacterScript : MonoBehaviour
         {
             fireHighestHP();
         }
-
+        
     }
 
     //new reloading timer 
@@ -668,7 +674,7 @@ public class CharacterScript : MonoBehaviour
             //StartCoroutine(shootLine(target.transform.position));
             targetScript.attackedFromLocations.Add(prefabObject.transform.position);
             targetScript.refreshEnemyLocationTimer();
-            
+            Gunshot.enabled = true;
             this.refreshReloadTimer();
         }
     }
@@ -699,6 +705,7 @@ public class CharacterScript : MonoBehaviour
             part.Play();
             targetScript.attackedFromLocations.Add(prefabObject.transform.position);
             targetScript.refreshEnemyLocationTimer();
+            Gunshot.enabled = true;
             this.refreshReloadTimer();
         }
     }
@@ -729,6 +736,7 @@ public class CharacterScript : MonoBehaviour
             part.Play();
             targetScript.attackedFromLocations.Add(prefabObject.transform.GetChild(0).transform.position);
             targetScript.refreshEnemyLocationTimer();
+            Gunshot.enabled = true;
             this.refreshReloadTimer();
         }
     }
@@ -758,6 +766,7 @@ public class CharacterScript : MonoBehaviour
             part.Play();
             targetScript.attackedFromLocations.Add(prefabObject.transform.position);
             targetScript.refreshEnemyLocationTimer();
+            Gunshot.enabled = true;
             this.refreshReloadTimer();
         }
     }
