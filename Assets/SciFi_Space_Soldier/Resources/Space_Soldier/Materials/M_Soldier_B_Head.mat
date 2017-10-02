@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: M_Soldier_B_Head
+  m_Shader: {fileID: 4800000, guid: b109fe30baa6ae24593d0da3972e0bb6, type: 3}
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b6464163ec4ac5341982a79d02e6a767, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorMask:
+        m_Texture: {fileID: 2800000, guid: b498b07523c8c804c9294b2fded8de2e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DiffuseCM:
+        m_Texture: {fileID: 2800000, guid: b498b07523c8c804c9294b2fded8de2e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: cf28180a9a456e340967b4ee17178919, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissiveMap:
+        m_Texture: {fileID: 2800000, guid: a057d79e6c18078428d62b5a54cf4b6b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GlossMap:
+        m_Texture: {fileID: 2800000, guid: 0c39ce78837276142af0dbf0ef872ce3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 2f5a147c8e798ed45ac7ac5e13006a16, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 5a18c989b69887946ac9a044b78c0202, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicMap:
+        m_Texture: {fileID: 2800000, guid: 9709f8bd059d7514bb67f0e199e0dfeb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalnessMap:
+        m_Texture: {fileID: 2800000, guid: e7e39d5e60bcda2428268207e655462e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: ef8b7b6cfca228f4e8ebe7a2dfa2510e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularMap:
+        m_Texture: {fileID: 2800000, guid: 9636cbd903a13d249a6cd95dddbd9dc1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DamageFX: 0
+    - _DetailNormalMapScale: 1
+    - _DiffuseFactor: 1.69
+    - _DstBlend: 0
+    - _EmissionFactor: 2
+    - _EmissiveFactor: 1
+    - _Glossiness: 0.9
+    - _Metallic: 1
+    - _MetalnessFactor: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Outline: 0
+    - _Parallax: 0.02
+    - _Specular: 1
+    - _SpecularColorized: 0.826
+    - _SpecularFactor: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _UVWorldScale: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.42409173, g: 0.57760227, b: 0.7794118, a: 1}
+    - _Color2: {r: 0.33823532, g: 0.677188, b: 1, a: 1}
+    - _DamageColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 1, g: 0.8924949, b: 0.6102941, a: 1}
+    - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MaskedColorA: {r: 0.18382353, g: 0.16084558, b: 0.16084558, a: 1}
+    - _MaskedColorB: {r: 0.18366133, g: 0.36720464, b: 0.5808823, a: 1}
+    - _MaskedColorC: {r: 0, g: 0, b: 1, a: 1}
+    - _OutlineColor: {r: 0.4338235, g: 0.78914815, b: 1, a: 0.39215687}
+    - _UVScale: {r: 1, g: 1, b: 1, a: 1}

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mechmania17", "Mechmania17.csproj", "{C31D53CB-E65C-B78D-79F9-40DE797AD72C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C31D53CB-E65C-B78D-79F9-40DE797AD72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C31D53CB-E65C-B78D-79F9-40DE797AD72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C31D53CB-E65C-B78D-79F9-40DE797AD72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C31D53CB-E65C-B78D-79F9-40DE797AD72C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
